@@ -6,7 +6,7 @@ const CardComponent = (props) => {
         <>
 			{props.movies.map((movie, index) => (
                 <div className="card">
-                        <img src={movie.Poster}/>
+                        <img src={movie.poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.poster}/>
                 </div>
             ))}
         </>
