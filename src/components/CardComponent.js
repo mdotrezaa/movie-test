@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./component.css"
 
 const CardComponent = (props) => {
+    const handleClick = () =>{
+        
+    }
     return(
         <>
 			{props.movies.map((movie, index) => (
-                <div className="card">
-                        <img src={movie.poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.poster}/>
-                </div>
+                <a className="card" href={"/movie/" + movie.imdbID}>
+                    <img src={movie.Poster === 'N/A' ? require("../assets/images/placeholder.png").default : movie.Poster}/>
+                </a>
             ))}
         </>
     );
